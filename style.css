@@ -1,0 +1,162 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk body */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f4f4f4, #eaeaea);
+    color: #333;
+    line-height: 1;
+}
+
+/* Gaya untuk header */
+header {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animasi fade in */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Gaya untuk profil */
+.profile {
+    display: flex;
+    justify-content: space-between; /* Membuat dua kolom */
+    padding: 40px;
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    animation: slideIn 0.5s ease-out;
+    transition: transform 0.3s;
+}
+
+/* Animasi slide in */
+@keyframes slideIn {
+    from { transform: translateY(15px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.profile:hover {
+    transform: translateY(-5px); /* Efek angkat saat hover */
+}
+
+.profile-info {
+    max-width: 400px; /* Lebar maksimum kolom kiri */
+    text-align: left; /* Rata kiri */
+    margin-right: 20px; /* Jarak antara kolom */
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 5px solid #ff5722;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Jarak antar judul */
+h2 {
+    margin: 20px 0; /* Jarak atas dan bawah untuk h2 */
+    color: #ff5722;
+}
+
+h3 {
+    margin: 15px 0; /* Jarak atas dan bawah untuk h3 */
+    color: #ff5722;
+}
+
+p {
+    margin: 5px 0; /* Jarak antar paragraf */
+    line-height: 1.4;
+}
+
+.social-media {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: #ff5722;
+    font-size: 28px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-media a:hover {
+    color: #d45d00;
+    transform: scale(1.2);
+}
+
+.contact-info, .education-info {
+    display: flex;
+    align-items: center;
+    margin: 10px 0; /* Jarak antar informasi kontak dan pendidikan */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.contact-info div, .education-info div {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i, .education-info i {
+    margin-right: 5px;
+    color: #ff5722;
+    font-size: 20px;
+}
+
+/* Gaya untuk kolom pendidikan dan pengalaman */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Dua kolom responsif */
+    gap: 20px; /* Jarak antara kolom */
+    margin-top: 10px;
+}
+
+/* Gaya untuk tombol */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #d45d00;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #000001;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}

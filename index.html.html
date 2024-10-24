@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Profil Pribadi</title>
+    <style>
+        /* Reset dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Gaya untuk body */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f4f4f4, #eaeaea);
+            color: #333;
+            line-height: 1;
+        }
+
+        /* Gaya untuk header */
+        header {
+            background-color: #000000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Gaya untuk profil */
+        .profile {
+            display: flex;
+            justify-content: space-between; /* Membuat dua kolom */
+            padding: 40px;
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            animation: slideIn 0.5s ease-out;
+            transition: transform 0.3s;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(15px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .profile:hover {
+            transform: translateY(-5px); /* Efek angkat saat hover */
+        }
+
+        .profile-info {
+            max-width: 400px; /* Lebar maksimum kolom kiri */
+            text-align: left; /* Rata kiri */
+            margin-right: 20px; /* Jarak antara kolom */
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 5px solid #ff5722;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        h2, h3 {
+            margin: 10px 0; /* Jarak antar judul */
+            color: #ff5722;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin: 10px 0;
+            line-height: 1;
+        }
+
+        .social-media {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            color: #ff5722;
+            font-size: 28px;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #d45d00;
+            transform: scale(1.2);
+        }
+
+        .contact-info, .education-info {
+            display: flex;
+            align-items: center;
+            margin: 10px 0; /* Jarak antar informasi kontak dan pendidikan */
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .contact-info div, .education-info div {
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info i, .education-info i {
+            margin-right: 5px;
+            color: #ff5722;
+            font-size: 20px;
+        }
+
+        /* Gaya untuk kolom pendidikan dan pengalaman */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Dua kolom responsif */
+            gap: 5px; /* Jarak antara kolom */
+            margin-top: 10px;
+        }
+
+        /* Gaya untuk tombol */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background-color: #d45d00;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #000001;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function loginToSocialMedia(platform) {
+            let url;
+            switch (platform) {
+                case 'instagram':
+                    url = 'https://www.instagram.com/rski___1/?igsh=MTdiN3htbjhua2ZiZw%3D%3D';
+                    break;
+                default:
+                    alert('Platform tidak dikenal');
+                    return;
+            }
+            window.open(url, '_blank');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>PROFIL</h1>
+    </header>
+
+    <section class="profile">
+        <div class="profile-info">
+            <img src="WhatsApp Image 2024-10-24 at 10.54.28.jpeg" alt="Foto Profil" class="profile-photo">
+            <h2>RESKI PANGINJA</h2>
+
+            <h3>KONTAK</h3>
+            <div class="contact-info">
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <p>Email: reskipanginja04@gmail.com</p>
+                </div>
+                <div>
+                    <i class="fas fa-phone-alt"></i>
+                    <p>Tlp: 087888303209</p>
+                </div>
+            </div>
+
+            <h3>ALAMAT</h3>
+            <div class="contact-info">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Jl. Kesenangan 7 no 326, blok E</p>
+            </div>
+        </div>
+
+        <div class="profile-info">
+            <h3>JENJANG PENDIDIKAN</h3>
+            <div class="grid-container">
+                <div class="education-info">
+                    <i class="fas fa-graduation-cap"></i>
+                    <p>SDN 159 Pakatan</p>
+                </div>
+                <div class="education-info">
+                    <i class="fas fa-graduation-cap"></i>
+                    <p>SMP 35 Makassar</p>
+                </div>
+                <div class="education-info">
+                    <i class="fas fa-graduation-cap"></i>
+                    <p>SMK Kartika XX-1 Makassar</p>
+                </div>
+                <div class="education-info">
+                    <i class="fas fa-graduation-cap"></i>
+                    <p>Politeknik Negeri Ujung Pandang</p>
+                </div>
+            </div>
+
+            <h3>PENGALAMAN ORGANISASI</h3>
+            <div class="grid-container">
+                <div class="education-info">
+                    <i class="fas fa-users"></i>
+                    <p>Anggota HME-PNUP periode 22/23</p>
+                </div>
+                <div class="education-info">
+                    <i class="fas fa-users"></i>
+                    <p>Koordinator Minat dan Bakat HME-PNUP periode 23/24</p>
+                </div>
+                <div class="education-info">
+                    <i class="fas fa-users"></i>
+                    <p>Anggota Staf Ahli HME-PNUP periode 24/25</p>
+                </div>
+            </div>
+
+            <!-- Tombol Download CV -->
+            <a href="path/to/your/cv.pdf" class="button" download>Download CV</a>
+        </div>
+    </section>
+
+    <div class="social-media">
+        <h3>Ikuti Saya</h3>
+        <a href="#" onclick="loginToSocialMedia('instagram')"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <footer>
+        <p>&copy; RESKI PANGINJA. SEMUA HAK DILINDUNGI</p>
+    </footer>
+</body>
+</html>
